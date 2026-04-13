@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI BOT - Official Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-gradient: linear-gradient(135deg, #00e5ff 0%, #7000ff 50%, #ff007f 100%);
+      --bg-color: #050a14;
+      --card-bg: #0f172a;
+      --text-white: #ffffff;
+      --text-dim: #94a3b8;
+      --accent-blue: #00d2ff;
+    }
+    
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-focus-ring-color: transparent;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: var(--bg-color);
+      color: var(--text-white);
+      padding-bottom: 100px;
+    }
+    
+    nav {
+      background: rgba(15, 23, 42, 0.8);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+    }
+    
+    nav h1 {
+      margin: 0;
+      font-size: 22px;
+      background: var(--main-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+    
+    .container {
+      padding: 20px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    
+    .promo-box {
+      background: linear-gradient(rgba(0, 229, 255, 0.1), rgba(255, 0, 127, 0.1));
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+      margin-bottom: 25px;
+      border: 1px dashed var(--accent-blue);
+    }
+    
+    .promo-box p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+      color: #cbd5e1;
+    }
+    
+    .section-title {
+      color: var(--accent-blue);
+      font-size: 14px;
+      font-weight: 700;
+      margin: 30px 0 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-left: 3px solid #ff007f;
+      padding-left: 10px;
+    }
+    
+    .card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--main-gradient);
+    }
+    
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--accent-blue);
+      margin-bottom: 5px;
+    }
+    
+    .card-price {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    
+    .card-price span {
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+    
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 15px 0;
+    }
+    
+    .features li {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    /* Bullets pengganti ikon petir */
+    .features li::before {
+      content: '•';
+      margin-right: 8px;
+      color: #00e5ff;
+      font-weight: bold;
+    }
+    
+    .btn-link {
+      text-decoration: none;
+      display: block;
+    }
+    
+    .btn-buy {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      border: none;
+      background: var(--main-gradient);
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    
+    .btn-buy:active {
+      transform: scale(0.95);
+    }
+    
+    .advantage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .adv-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 12px;
+      border: 1px solid rgba(0, 229, 255, 0.1);
+      color: #cbd5e1;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 11px;
+      color: var(--text-dim);
+      background: #020617;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head>
+
+<body>
+  
+  <nav>
+    <h1>AI BOT</h1>
+    <div style="font-size: 10px; background: #ff007f; padding: 2px 8px; border-radius: 10px; font-weight: bold;">STORE</div>
+  </nav>
+  
+  <div class="container">
+    
+    <div class="promo-box">
+      <p><strong>Gak mau grup sepi?</strong> Sewa AI BOT sekarang! Member bebas main game sepuasnya, fast respon, fitur lengkap, dan anti bosan!</p>
+    </div>
+    
+    <div class="section-title">Kelebihan AI Bot</div>
+    <div class="advantage-grid">
+      <div class="adv-item">Group Management</div>
+      <div class="adv-item">All Downloader</div>
+      <div class="adv-item">Smart AI</div>
+      <div class="adv-item">Game With Friends</div>
+      <div class="adv-item">Canvas & Sticker</div>
+      <div class="adv-item">Menu Random</div>
+    </div>
+    
+    <div class="section-title">Daftar Harga Layanan</div>
+    
+    <div class="card">
+      <div class="card-title">Basic Off-Game</div>
+      <div class="card-price">6.000 <span>/ bulan</span></div>
+      <ul class="features">
+        <li>Cocok Untuk Management Group</li>
+        <li>Fitur Fast & Respon Kilat</li>
+      </ul>
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Basic+Off-Game+6.000" class="btn-link">
+        <button class="btn-buy">BELI SEKARANG</button>
+      </a>
+    </div>
+    
+    <div class="card">
+      <div class="card-title">Basic On-Game</div>
+      <div class="card-price">10.000 <span>/ bulan</span></div>
+      <ul class="features">
+        <li>Member Bebas Main Game Sepuasnya</li>
+        <li>Fitur Hiburan Lengkap & Seru</li>
+      </ul>
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Basic+On-Game+10.000" class="btn-link">
+        <button class="btn-buy">BELI SEKARANG</button>
+      </a>
+    </div>
+    
+    <div class="card">
+      <div class="card-title">Standar Pack</div>
+      <div class="card-price">15.000 <span>/ bulan</span></div>
+      <ul class="features">
+        <li>Free Premium Bagi Penyewa</li>
+        <li>Fitur Game + Group Lengkap</li>
+      </ul>
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Standar+Pack+15.000" class="btn-link">
+        <button class="btn-buy">BELI SEKARANG</button>
+      </a>
+    </div>
+    
+    <div class="card">
+      <div class="card-title">VIP (3 Admin Dapat Akses Premium)</div>
+      <div class="card-price">25.000 <span>/ bulan</span></div>
+      <ul class="features">
+        <li>3 Admin Bebas Chat Bot di Private Chat</li>
+        <li>Fitur Lengkap & Fast Respon</li>
+      </ul>
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Premium+3+Admin+25.000" class="btn-link">
+        <button class="btn-buy">BELI SEKARANG</button>
+      </a>
+    </div>
+    
+    <div class="card" style="border: 1px solid #00e5ff;">
+      <div class="card-title">VVIP (Premium Group)</div>
+      <div class="card-price">35.000 <span>/ bulan</span></div>
+      <ul class="features">
+        <li>Semua Member Bebas Akses Fitur Premium</li>
+        <li>Khusus Penggunaan Dalam Group</li>
+      </ul>
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Premium+Group+35.000" class="btn-link">
+        <button class="btn-buy">BELI SEKARANG</button>
+      </a>
+    </div>
+    
+    <div class="card">
+      <div class="card-title">Upchannel Audio</div>
+      <div class="card-price">13.000 <span>/ bulan</span></div>
+      <ul class="features">
+        <li>Upload Audio ke Saluran WhatsApp</li>
+        <li>Proses Instant & Fitur Lengkap</li>
+      </ul>
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Upchannel+Audio+13.000" class="btn-link">
+        <button class="btn-buy">BELI SEKARANG</button>
+      </a>
+    </div>
+    
+    <div class="card">
+      <div class="card-title">Premium User</div>
+      <div class="card-price">10.000 <span>/ bulan</span></div>
+      <ul class="features">
+        <li>Bebas Confess & All Fitur Terbuka</li>
+        <li>Akses Full Fitur Tanpa Batas</li>
+      </ul>
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Premium+User+10.000" class="btn-link">
+        <button class="btn-buy">BELI SEKARANG</button>
+      </a>
+    </div>
+    
+  </div>
+  
+  <footer>
+    &copy; 2024 - 2026 AI Dev's.
+  </footer>
+  
+</body>
+
+</html>
