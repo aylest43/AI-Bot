@@ -4,19 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  
-  <meta property="og:title" content="AI BOT - Official Store">
-  <meta property="og:description" content="Sewa AI BOT sekarang! Grup jadi ramai, fitur management lengkap, banyak game seru, dan fast respon.">
-  <meta property="og:image" content="https://ai-bot-ashy-pi.vercel.app/ai-bot.jpg">
-  <meta property="og:url" content="https://ai-bot-ashy-pi.vercel.app">
+  <meta name="description" content="AI BOT Official Store - Sewa bot WhatsApp dengan fitur lengkap, group management, downloader, game, dan AI canggih. Harga mulai 6.000/bulan.">
+  <meta name="keywords" content="AI BOT, bot WhatsApp, sewa bot, group management, WhatsApp bot, AI bot store, bot murah">
+  <meta name="author" content="Remy - AI Dev">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Indonesian">
+  <meta name="theme-color" content="#00e5ff">
+  <meta name="color-scheme" content="dark">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ai-bot-store.vercel.app/">
+  <meta property="og:title" content="AI BOT - Official Store | Sewa Bot WhatsApp">
+  <meta property="og:description" content="Tingkatkan pengalaman grup WhatsAppmu dengan AI BOT! Fitur lengkap: anti-link, game seru, AI pintar, downloader, dan masih banyak lagi. Mulai dari 6.000/bulan.">
+  <meta property="og:image" content="https://ai-bot-ashy-pi.vercel.app/ai-bot.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-
+  <meta property="og:image:alt" content="AI BOT Official Store - Layanan Bot WhatsApp Premium">
+  <meta property="og:site_name" content="AI BOT Official Store">
+  <meta property="og:locale" content="id_ID">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://ai-bot-store.vercel.app/">
+  <meta name="twitter:title" content="AI BOT - Official Store | Sewa Bot WhatsApp">
+  <meta name="twitter:description" content="Bot WhatsApp super lengkap untuk grup kamu! Group management, AI, game, downloader, dan fitur keren lainnya. Harga bersahabat mulai 6.000/bulan.">
+  <meta name="twitter:image" content="https://ai-bot-ashy-pi.vercel.app/ai-bot.jpg">
+  <meta name="twitter:image:alt" content="AI BOT Official Store Banner">
+  <meta name="twitter:creator" content="@aidev_remy">
+  <meta name="twitter:site" content="@aibotstore">
+  <meta name="application-name" content="AI BOT Store">
+  <meta name="apple-mobile-web-app-title" content="AI BOT Store">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>AI BOT - Official Store</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
   <style>
     :root {
       --main-gradient: linear-gradient(135deg, #00e5ff 0%, #7000ff 50%, #ff007f 100%);
@@ -25,149 +44,669 @@
       --text-white: #ffffff;
       --text-dim: #94a3b8;
       --accent-blue: #00d2ff;
+      --glow-blue: rgba(0, 229, 255, 0.3);
     }
     
-    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
-    body { font-family: 'Poppins', sans-serif; background-color: var(--bg-color); color: var(--text-white); padding-bottom: 100px; }
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-focus-ring-color: transparent;
+    }
     
-    nav { background: rgba(15, 23, 42, 0.85); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0, 229, 255, 0.3); }
-    nav h1 { font-size: 22px; background: var(--main-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; display: flex; align-items: center; gap: 10px; }
-    .store-badge { font-size: 11px; background: #ff007f; padding: 4px 12px; border-radius: 40px; font-weight: bold; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: var(--bg-color);
+      color: var(--text-white);
+      padding-bottom: 100px;
+    }
     
-    .container { padding: 20px; max-width: 480px; margin: 0 auto; }
-    .promo-box { background: linear-gradient(125deg, rgba(0, 229, 255, 0.12), rgba(255, 0, 127, 0.08)); padding: 20px 18px; border-radius: 28px; margin-bottom: 28px; border: 1px solid rgba(0, 210, 255, 0.3); display: flex; align-items: center; gap: 12px; }
-    .promo-box i { font-size: 28px; color: #00e5ff; }
-    .promo-box p { font-size: 13px; line-height: 1.55; flex: 1; }
+    nav {
+      background: rgba(15, 23, 42, 0.85);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(0, 229, 255, 0.3);
+    }
     
-    .section-title { color: var(--accent-blue); font-size: 14px; font-weight: 700; margin: 30px 0 15px; text-transform: uppercase; border-left: 3px solid #ff007f; padding-left: 12px; display: flex; align-items: center; gap: 8px; }
-    .advantage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 10px; }
-    .adv-item { background: rgba(255, 255, 255, 0.03); padding: 14px 8px; border-radius: 20px; text-align: center; font-size: 12px; border: 1px solid rgba(0, 229, 255, 0.15); display: flex; align-items: center; justify-content: center; gap: 8px; }
+    nav h1 {
+      margin: 0;
+      font-size: 22px;
+      background: var(--main-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     
-    .card { background: var(--card-bg); border-radius: 28px; padding: 20px; margin-bottom: 18px; border: 1px solid rgba(255, 255, 255, 0.04); position: relative; overflow: hidden; box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.5); }
-    .card::before { content: ''; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--main-gradient); }
-    .card-title { font-size: 16px; font-weight: 700; color: var(--accent-blue); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
-    .card-price { font-size: 26px; font-weight: 800; margin-bottom: 12px; }
-    .card-price span { font-size: 12px; color: var(--text-dim); }
-    .features { list-style: none; margin-bottom: 18px; }
-    .features li { font-size: 13px; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #cbd5e1; }
-    .features li i { color: #00e5ff; font-size: 12px; }
+    nav h1 i {
+      background: none;
+      -webkit-text-fill-color: #00e5ff;
+      background: transparent;
+      font-size: 24px;
+    }
     
-    .btn-buy { width: 100%; padding: 14px; border-radius: 40px; border: none; background: var(--main-gradient); color: white; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; font-family: 'Poppins', sans-serif; }
-    footer { text-align: center; padding: 16px 20px; font-size: 11px; color: var(--text-dim); background: #020617dd; position: fixed; bottom: 0; width: 100%; border-top: 1px solid rgba(0, 229, 255, 0.2); }
-    .card[data-vip="true"] { border: 1px solid #00e5ff; }
+    .store-badge {
+      font-size: 11px;
+      background: #ff007f;
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 0 8px rgba(255, 0, 127, 0.4);
+    }
+    
+    .store-badge i {
+      font-size: 11px;
+    }
+    
+    .hero {
+      background: linear-gradient(145deg, #0a0f1f 0%, #0c1225 100%);
+      border-radius: 32px;
+      margin: 20px 20px 28px 20px;
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.6);
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(0, 229, 255, 0.15) 0%, rgba(255, 0, 127, 0.05) 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    
+    .hero-profile {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .avatar-frame {
+      background: var(--main-gradient);
+      padding: 3px;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulseGlow 2s infinite;
+    }
+    
+    .avatar {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(145deg, #0f172a, #1e293b);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 44px;
+      color: #00e5ff;
+      box-shadow: inset 0 0 15px rgba(0, 229, 255, 0.2);
+    }
+    
+    @keyframes pulseGlow {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.4);
+      }
+      
+      70% {
+        box-shadow: 0 0 0 8px rgba(0, 229, 255, 0);
+      }
+      
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 229, 255, 0);
+      }
+    }
+    
+    .hero-name h2 {
+      font-size: 26px;
+      font-weight: 800;
+      background: var(--main-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 229, 255, 0.12);
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.3);
+    }
+    
+    .hero-badge i {
+      font-size: 10px;
+    }
+    
+    .hero-desc {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero-desc p {
+      color: #cbd5e6;
+      line-height: 1.5;
+      font-size: 14px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    
+    .hero-stats {
+      display: flex;
+      gap: 24px;
+      margin-top: 8px;
+    }
+    
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 6px 14px;
+      border-radius: 40px;
+      backdrop-filter: blur(4px);
+    }
+    
+    .stat-item i {
+      color: #ff007f;
+      font-size: 12px;
+    }
+    
+    .stat-item span {
+      color: #fff;
+      font-weight: 700;
+    }
+    
+    .container {
+      padding: 0 20px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    
+    .promo-box {
+      background: linear-gradient(125deg, rgba(0, 229, 255, 0.12), rgba(255, 0, 127, 0.08));
+      padding: 20px 18px;
+      border-radius: 28px;
+      text-align: center;
+      margin-bottom: 28px;
+      border: 1px solid rgba(0, 210, 255, 0.3);
+      backdrop-filter: blur(2px);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .promo-box i {
+      font-size: 28px;
+      color: #00e5ff;
+      filter: drop-shadow(0 0 4px #00e5ff);
+    }
+    
+    .promo-box p {
+      font-size: 13px;
+      line-height: 1.55;
+      margin: 0;
+      color: #e2e8f0;
+      font-weight: 500;
+      text-align: left;
+      flex: 1;
+    }
+    
+    .promo-box p strong {
+      color: #ff5e9e;
+    }
+    
+    .section-title {
+      color: var(--accent-blue);
+      font-size: 14px;
+      font-weight: 700;
+      margin: 30px 0 15px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-left: 3px solid #ff007f;
+      padding-left: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .section-title i {
+      font-size: 16px;
+      color: #ff007f;
+    }
+    
+    .card {
+      background: var(--card-bg);
+      border-radius: 28px;
+      padding: 20px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      position: relative;
+      overflow: hidden;
+      transition: 0.2s ease;
+      box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.5);
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--main-gradient);
+    }
+    
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent-blue);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .card-title i {
+      font-size: 18px;
+      color: #ff007f;
+    }
+    
+    .card-price {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    
+    .card-price span {
+      font-size: 12px;
+      color: var(--text-dim);
+      font-weight: 400;
+    }
+    
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px 0;
+    }
+    
+    .features li {
+      font-size: 13px;
+      margin-bottom: 8px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .features li i {
+      width: 20px;
+      font-size: 12px;
+      color: #00e5ff;
+      text-align: center;
+    }
+    
+    .btn-link {
+      text-decoration: none;
+      display: block;
+    }
+    
+    .btn-buy {
+      width: 100%;
+      padding: 14px;
+      border-radius: 40px;
+      border: none;
+      background: var(--main-gradient);
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      letter-spacing: 0.5px;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .btn-buy i {
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    
+    .btn-buy:active {
+      transform: scale(0.97);
+    }
+    
+    .btn-buy:active i {
+      transform: translateX(3px);
+    }
+    
+    .advantage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    
+    .adv-item {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 14px 8px;
+      border-radius: 20px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid rgba(0, 229, 255, 0.15);
+      color: #e2e8f0;
+      transition: 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    
+    .adv-item i {
+      font-size: 16px;
+      color: #00e5ff;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 16px 20px;
+      font-size: 11px;
+      color: var(--text-dim);
+      background: #020617dd;
+      backdrop-filter: blur(8px);
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      border-top: 1px solid rgba(0, 229, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      z-index: 99;
+    }
+    
+    footer i {
+      font-size: 12px;
+      color: #ff5e9e;
+    }
+    
+    .card:active {
+      transform: scale(0.99);
+      transition: 0.05s;
+    }
+    
+    @media (max-width: 450px) {
+      .container {
+        padding: 0 16px;
+      }
+      
+      .hero {
+        margin: 16px 16px 24px 16px;
+        padding: 20px 18px;
+      }
+      
+      .avatar {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(145deg, #0f172a, #1e293b);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      
+      .hero-name h2 {
+        font-size: 22px;
+      }
+      
+      .adv-item {
+        font-size: 11px;
+        padding: 10px 6px;
+      }
+      
+      .card-price {
+        font-size: 24px;
+      }
+      
+      .hero-stats {
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      
+      .stat-item {
+        font-size: 11px;
+        padding: 4px 12px;
+      }
+    }
+    
+    .card[data-vip="true"] {
+      border: 1px solid #00e5ff;
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+    }
   </style>
 </head>
 
 <body>
+  
   <nav>
-    <h1><i class="fas fa-robot"></i> AI BOT</h1>
-    <div class="store-badge"><i class="fas fa-store"></i> STORE</div>
+    <h1>
+      <i class="fas fa-robot"></i> AI BOT
+    </h1>
+    <div class="store-badge">
+      <i class="fas fa-store"></i> STORE
+    </div>
   </nav>
   
+  <div class="hero">
+    <div class="hero-profile">
+      <div class="avatar-frame">
+        <div class="avatar">
+          <img src="https://ai-bot-ashy-pi.vercel.app/ai-bot.jpg" alt="Profile" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+        </div>
+      </div>
+      <div class="hero-name">
+        <h2>AI BOT STORE</h2>
+        <div class="hero-badge">
+          <i class="fas fa-check-circle"></i> Official Creator
+        </div>
+      </div>
+    </div>
+    <div class="hero-desc">
+      <p>
+        <i class="fas fa-quote-left" style="color: #00e5ff; margin-right: 6px; opacity: 0.7;"></i>
+        Hai! Saya <strong style="color:#00e5ff">AI Dev</strong>, pengembang di balik layanan bot WhatsApp canggih ini.
+        Dengan pengalaman lebih dari 2 tahun, saya menghadirkan bot dengan fitur lengkap, stabil, dan super responsif.
+        Solusi terbaik untuk grup WhatsApp kamu agar lebih hidup dan terkelola dengan baik.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <i class="fas fa-users"></i>
+          <span>1.200+</span> User Aktif
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-clock"></i>
+          <span>24/7</span> Support
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-star"></i>
+          <span>4.9★</span> Rating
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div class="container">
+    
     <div class="promo-box">
       <i class="fas fa-chalkboard-user"></i>
-      <p><strong>Gak mau grup sepi?</strong> Sewa AI BOT sekarang! Member bebas main game sepuasnya, fast respon, fitur lengkap!</p>
+      <p><strong>Gak mau grup sepi?</strong> Sewa AI BOT sekarang! Member bebas main game sepuasnya, fast respon, fitur lengkap, dan anti bosan!</p>
     </div>
-
-    <div class="section-title"><i class="fas fa-bolt"></i> Kelebihan AI Bot</div>
+    
+    <div class="section-title">
+      <i class="fas fa-bolt"></i> Kelebihan AI Bot
+    </div>
     <div class="advantage-grid">
       <div class="adv-item"><i class="fas fa-users-gear"></i> Group Management</div>
       <div class="adv-item"><i class="fas fa-download"></i> All Downloader</div>
       <div class="adv-item"><i class="fas fa-brain"></i> Smart AI</div>
       <div class="adv-item"><i class="fas fa-gamepad"></i> Game With Friends</div>
+      <div class="adv-item"><i class="fas fa-palette"></i> Canvas & Sticker</div>
+      <div class="adv-item"><i class="fas fa-dice-d6"></i> Menu Random</div>
     </div>
-
-    <div class="section-title"><i class="fas fa-tags"></i> Daftar Harga Layanan</div>
-
+    
+    <div class="section-title">
+      <i class="fas fa-tags"></i> Daftar Harga Layanan
+    </div>
+    
     <div class="card">
-      <div class="card-title"><i class="fas fa-shield-alt"></i> Basic Off-Game</div>
+      <div class="card-title">
+        <i class="fas fa-shield-alt"></i> Basic Off-Game
+      </div>
       <div class="card-price">6.000 <span>/ bulan</span></div>
       <ul class="features">
-        <li><i class="fas fa-robot"></i> Bot Khusus Jaga Group (Anti-Link)</li>
+        <li><i class="fas fa-robot"></i> Management Group</li>
         <li><i class="fas fa-bolt"></i> Fitur Fast & Respon Kilat</li>
       </ul>
-      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Basic+Off-Game+6.000" style="text-decoration:none;">
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Basic+Off-Game+6.000" class="btn-link">
         <button class="btn-buy"><i class="fab fa-whatsapp"></i> BELI SEKARANG</button>
       </a>
     </div>
-
+    
     <div class="card">
-      <div class="card-title"><i class="fas fa-gamepad"></i> Basic On-Game</div>
+      <div class="card-title">
+        <i class="fas fa-gamepad"></i> Basic On-Game
+      </div>
       <div class="card-price">10.000 <span>/ bulan</span></div>
       <ul class="features">
-        <li><i class="fas fa-user-plus"></i> Member Bebas Main Game Sepuasnya</li>
+        <li><i class="fas fa-user-plus"></i> Member Bebas Main Game</li>
         <li><i class="fas fa-music"></i> Fitur Hiburan Lengkap & Seru</li>
       </ul>
-      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Basic+On-Game+10.000" style="text-decoration:none;">
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Basic+On-Game+10.000" class="btn-link">
         <button class="btn-buy"><i class="fab fa-whatsapp"></i> BELI SEKARANG</button>
       </a>
     </div>
-
+    
     <div class="card">
-      <div class="card-title"><i class="fas fa-crown"></i> Standar Pack</div>
+      <div class="card-title">
+        <i class="fas fa-crown"></i> Standar Pack
+      </div>
       <div class="card-price">15.000 <span>/ bulan</span></div>
       <ul class="features">
         <li><i class="fas fa-gem"></i> Free Premium Bagi Penyewa</li>
         <li><i class="fas fa-layer-group"></i> Fitur Game + Group Lengkap</li>
       </ul>
-      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Standar+Pack+15.000" style="text-decoration:none;">
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Standar+Pack+15.000" class="btn-link">
         <button class="btn-buy"><i class="fab fa-whatsapp"></i> BELI SEKARANG</button>
       </a>
     </div>
-
+    
     <div class="card">
-      <div class="card-title"><i class="fas fa-user-tie"></i> Premium (3 Admin)</div>
+      <div class="card-title">
+        <i class="fas fa-user-tie"></i> Premium (3 Admin)
+      </div>
       <div class="card-price">25.000 <span>/ bulan</span></div>
       <ul class="features">
-        <li><i class="fas fa-comment-dots"></i> Admin Bebas Chat Bot di Private Chat</li>
-        <li><i class="fas fa-infinity"></i> Semua Fitur Terbuka & Fast Respon</li>
+        <li><i class="fas fa-comment-dots"></i> 3 Admin Bebas Chat Bot di Private Chat</li>
+        <li><i class="fas fa-infinity"></i> Berbagai Fitur Menarik Dapat di Akses Member</li>
       </ul>
-      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Premium+3+Admin+25.000" style="text-decoration:none;">
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Premium+3+Admin+25.000" class="btn-link">
         <button class="btn-buy"><i class="fab fa-whatsapp"></i> BELI SEKARANG</button>
       </a>
     </div>
-
+    
     <div class="card" data-vip="true">
-      <div class="card-title"><i class="fas fa-star-of-life"></i> Premium Group (VIP)</div>
+      <div class="card-title">
+        <i class="fas fa-star-of-life"></i> Premium Group (VIP)
+      </div>
       <div class="card-price">35.000 <span>/ bulan</span></div>
       <ul class="features">
         <li><i class="fas fa-users"></i> Semua Member Bebas Akses Fitur Premium</li>
         <li><i class="fas fa-chalkboard"></i> Khusus Penggunaan Dalam Group</li>
       </ul>
-      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Premium+Group+35.000" style="text-decoration:none;">
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Premium+Group+35.000" class="btn-link">
         <button class="btn-buy"><i class="fab fa-whatsapp"></i> BELI SEKARANG</button>
       </a>
     </div>
-
+    
     <div class="card">
-      <div class="card-title"><i class="fas fa-headphones"></i> Up channel Audio</div>
+      <div class="card-title">
+        <i class="fas fa-headphones"></i> Up channel Audio
+      </div>
       <div class="card-price">13.000 <span>/ bulan</span></div>
       <ul class="features">
         <li><i class="fas fa-upload"></i> Up Audio ke Saluran WhatsApp</li>
         <li><i class="fas fa-tachometer-alt"></i> Proses Instant & Fitur Lengkap</li>
       </ul>
-      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Upchannel+Audio+13.000" style="text-decoration:none;">
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Upchannel+Audio+13.000" class="btn-link">
         <button class="btn-buy"><i class="fab fa-whatsapp"></i> BELI SEKARANG</button>
       </a>
     </div>
-
+    
     <div class="card">
-      <div class="card-title"><i class="fas fa-user-astronaut"></i> Premium User</div>
+      <div class="card-title">
+        <i class="fas fa-user-astronaut"></i> Premium User
+      </div>
       <div class="card-price">10.000 <span>/ bulan</span></div>
       <ul class="features">
-        <li><i class="fas fa-feather-alt"></i> Bebas Confess & Fitur Terbuka</li>
+        <li><i class="fas fa-feather-alt"></i> Bebas Confess & Semua Fitur Terbuka</li>
         <li><i class="fas fa-unlock-alt"></i> Akses Full Fitur Tanpa Batas</li>
       </ul>
-      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Premium+User+10.000" style="text-decoration:none;">
+      <a href="https://wa.me/6285133727171?text=Halo+Admin+AI+BOT,+saya+ingin+beli+paket+Premium+User+10.000" class="btn-link">
         <button class="btn-buy"><i class="fab fa-whatsapp"></i> BELI SEKARANG</button>
       </a>
     </div>
-
+    
   </div>
   
   <footer>
     <i class="far fa-copyright"></i> 2024 - 2026 AI Dev's.
   </footer>
+  
 </body>
+
 </html>
